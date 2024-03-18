@@ -7,10 +7,16 @@ import { IconContext } from "react-icons";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
+  const [dark, setDark] = React.useState(false);
 
   const handleNav = () => {
     setNav(!nav);
   };
+
+  const darkModeHandler = () => {
+        setDark(!dark);
+        document.body.classList.toggle("dark");
+    }
 
   return (
     <div className='flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-white'>
