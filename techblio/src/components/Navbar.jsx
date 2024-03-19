@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
-import { faMoon } from "@fortawesome/free-regular-svg-icons";
 import { IoMoon } from "react-icons/io5";
 import { IoSunny } from "react-icons/io5";
 import { IconContext } from "react-icons";
@@ -19,7 +18,7 @@ const Navbar = () => {
     };
 
   return (
-    <div className='flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-white className="bg-yellow-100 dark:bg-blue-900">'>
+    <div className='flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-white '>
       <h1 className='w-full text-3xl font-bold text-[#00df9a]'>TECHBLIO.</h1>
       <ul className='hidden md:flex'>
         <li className='p-4'>Home</li>
