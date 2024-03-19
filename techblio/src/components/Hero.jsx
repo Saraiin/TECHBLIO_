@@ -13,7 +13,7 @@ const Hero = () => {
         </h1>
         <div className='flex justify-center items-center'>
           <p className='md:text-5xl sm:text-4xl text-xl font-bold py-4'>
-            Ressources, e-books, Roadmaps for
+            Ressources, e-books, Roadmaps
           </p>
           {/*<Typed
           className='md:text-5xl sm:text-4xl text-xl font-bold md:pl-4 pl-2'
