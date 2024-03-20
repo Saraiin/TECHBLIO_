@@ -22,42 +22,44 @@ const Footer = () => {
         </div>
       </div>
       <div className='lg:col-span-2 flex justify-between mt-6'>
-    <div>
-        <h6 className='font-medium text-gray-400 '>Front-end</h6>
-        <ul>
+        <div>
+          <h6 className='font-medium text-gray-400 '>Front-end</h6>
+          <ul>
             <li className='py-2 text-sm'>HTML-CSS</li>
             <li className='py-2 text-sm'>Javascript</li>
             <li className='py-2 text-sm'>React</li>
             <li className='py-2 text-sm'>Tailwind</li>
-        </ul>
-    </div>
-    <div>
-        <h6 className='font-medium text-gray-400'>Back-end</h6>
-        <ul>
+          </ul>
+        </div>
+        <div>
+          <h6 className='font-medium text-gray-400'>Back-end</h6>
+          <ul>
             <li className='py-2 text-sm'>Python</li>
             <li className='py-2 text-sm'>C</li>
             <li className='py-2 text-sm'>API</li>
             <li className='py-2 text-sm'>Node.js</li>
-        </ul>
-    </div>
-    <div>
-        <h6 className='font-medium text-gray-400'>Company</h6>
+          </ul>
+        </div>
+      <div>
+      <h6 className='font-medium text-gray-400'>Company</h6>
         <ul>
             <li className='py-2 text-sm'>About</li>
             <li className='py-2 text-sm'>Blog</li>
             <li className='py-2 text-sm'>Careers</li>
         </ul>
-    </div>
+      </div>
     <div>
-        <h6 className='font-medium text-gray-400'>Ressources</h6>
-        <ul>
+      <h6 className='font-medium text-gray-400'>Ressources</h6>
+      <ul>
             <li className='py-2 text-sm'>e-books</li>
             <li className='py-2 text-sm'>Roadmap</li>
             <li className='py-2 text-sm'>Cheatsheet</li>
-        </ul>
+      </ul>
     </div>
-      </div>
+    
     </div>
+    
+  </div>
   );
 };
 
