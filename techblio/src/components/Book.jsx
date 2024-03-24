@@ -130,13 +130,16 @@ const Book = () => {
             <div className='flex justify-between px-2 py-4'>
               <p className='font-bold'>{item.name}</p>
               <p>
-                <span className='bg-orange-500 text-white p-1 rounded-full'>
+                <span className='bg-orange-900 text-white p-1 rounded-full'>
                     {item.guide}
                 </span>
               </p>
-                <GrInstallOption  size={15} className='text-black'/>
-                <FaEye size={15} className='text-black'/>
+                
             </div>
+            <div className='flex justfiy-between flex-end pl-2'>
+                  <GrInstallOption  size={15} className='text-black'/>
+                  <FaEye size={15} className='text-black'/>
+             </div>
           </div>
         ))}
       </div>
