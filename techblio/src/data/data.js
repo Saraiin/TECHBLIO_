@@ -193,24 +193,21 @@ export const data = [
       id: 1,
       name: 'HTML/CSS',
       image:
-        '',
+        css,
     },
     {
       id: 2,
       name: 'REACT',
-      image:
-        '',
+      image:react,
     },
     {
       id: 3,
-      name: 'Front-end RoadMap',
-      image:
-        '',
+      name: 'Python',
+      image:python,
     },
     {
       id: 4,
       name: 'JavaScript',
-      image:
-        '',
+      image:javascript,
     },
   ];
