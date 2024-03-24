@@ -1,15 +1,16 @@
 import React from 'react';
 
-
-import Footer from './components/Footer';
-import Sign from './components/Sign';
+import Navibar from './components/Navibar';
+import Book from './components/Book';
+import Category from './components/Category';
 
 function App() {
   return (
     <div className="bg-gray-50 dark:bg-gray-600">
-    
-      <Footer />
-      <Sign />
+      <Navibar />
+      <Book />
+      <Category />
+      
       
     </div>
   );
