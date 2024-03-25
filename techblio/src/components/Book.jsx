@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { data } from '../data/data.js';
 import { GrInstallOption } from "react-icons/gr";
-import { FaEye } from "react-icons/fa";
+import { MdOutlineRemoveRedEye } from "react-icons/md";
 
 
 const Book = () => {
-  //   console.log(data);
+ 
   const [books, setBooks] = useState(data);
 
   //   Filter Type html/css/react
@@ -83,7 +83,7 @@ const Book = () => {
           </div>
         </div>
 
-        {/* Filter guide */}
+        {/* Filter guide(ebook, roadmap or  cheatsheet) */}
         <div>
           {/*<p className='font-bold text-gray-700'>Filter guide</p>*/}
           <div className='flex justify-between max-w-[390px] w-full'>
@@ -115,7 +115,7 @@ const Book = () => {
         </div>
       </div>
 
-      {/* Display Books */}
+      {/* Display data: Books/RoadMaps/Cheatsheet */}
       <div className='grid grid-cols-2 lg:grid-cols-4 gap-6 pt-4'>
         {books.map((item, index) => (
           <div
@@ -130,7 +130,7 @@ const Book = () => {
             <div className='flex justify-between px-2 py-4'>
               <p className='font-bold'>{item.name}</p>
               <p>
-                <span className='bg-orange-900 text-white p-1 rounded-full'>
+                <span className='bg-blue-900 text-white p-1 rounded-full'>
                     {item.guide}
                 </span>
               </p>
@@ -138,7 +138,7 @@ const Book = () => {
             </div>
             <div className='flex justfiy-between flex-end pl-2'>
                   <GrInstallOption  size={15} className='text-black'/>
-                  <FaEye size={15} className='text-black'/>
+                  <MdOutlineRemoveRedEye size={15} className='text-black'/>
              </div>
           </div>
         ))}
