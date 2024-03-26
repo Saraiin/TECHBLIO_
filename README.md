@@ -19,7 +19,7 @@ TechBlio is a user-friendly and visually appealing e-library designed specifical
 
 <h2>Getting Started</h2>
 
-	1.	Clone the repository: git clone https://github.com/yourusername/techblio.git
+	1.	Clone the repository: git clone https://github.com/saraiin/techblio.git
 	2.	Install dependencies: npm install
 	3.	Start the development server: npm start
 
