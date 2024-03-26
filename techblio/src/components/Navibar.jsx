@@ -1,19 +1,35 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { AiOutlineMenu, AiOutlineSearch, AiOutlineClose} from 'react-icons/ai';
 import { BsFillSaveFill } from 'react-icons/bs';
 import {FaUserFriends} from 'react-icons/fa'
 import {MdFavorite, MdHelp} from 'react-icons/md'
 import { IoIosBook } from "react-icons/io";
 import { IoMoon, IoSunny } from "react-icons/io5";
+import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 
 
 const Navibar = () => {
 const [nav, setNav] = useState(false)
 const [dark, setDark] = React.useState(false);
+const [query, setQuery] = useState('');
+const navigate = useNavigate();
 
+//change mode to dark
 const darkModeHandler = () => {
   setDark(!dark);
   document.body.classList.toggle("dark");
+};
+
+//search bar 
+const handleChange = (e) => {
+  setQuery(e.target.value);
+};
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+  navigate(`/search?query=${encodeURIComponent(query)}`);
 };
 
   return (
@@ -24,20 +40,26 @@ const darkModeHandler = () => {
           <AiOutlineMenu size={30} />
         </div>
         <h1 className='text-2xl sm:text-3xl lg:text-4xl px-2'>
-          <span className='font-bold'>TECHBLIO.</span>
+          <span className='font-bold'><Link to="/">TECHBLIO.</Link></span>
         </h1>
         
       </div>
 
       {/* Search Input */}
-      <div className='bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]'>
-        <AiOutlineSearch size={25} />
-        <input
-          className='bg-transparent p-2 w-full focus:outline-none'
-          type='text'
-          placeholder='Search books'
-        />
-      </div>
+      <form onSubmit={handleSubmit}>
+        <div className='bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]'>
+          <AiOutlineSearch size={25} />
+          <input
+            className='bg-transparent p-2 w-full focus:outline-none'
+            type='text'
+            placeholder='Search books'
+            value={query}
+            onChange={handleChange}
+          />
+        </div>
+      </form>
+
+
       {/* Sun/moon button */}
     
       <button onClick={()=> darkModeHandler()} className=' text-dark hidden md:flex items-center py-2  dark:text-white'>
@@ -62,7 +84,7 @@ const darkModeHandler = () => {
           className='absolute right-4 top-4 cursor-pointer'
         />
         <h2 className='text-2xl p-4 font-bold'>
-          TECHBLIO.
+          <Link to="/">TECHBLIO.</Link>
         </h2>
         <nav>
             <ul className='flex flex-col p-4 text-gray-800'>
@@ -77,5 +99,4 @@ const darkModeHandler = () => {
     </div>
   );
 };
-
 export default Navibar;

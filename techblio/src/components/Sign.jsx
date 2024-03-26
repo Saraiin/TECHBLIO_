@@ -7,7 +7,7 @@ const Sign = () => {
     const year = date.getFullYear();
     return (
         <div className='flex flex-row justify-center items-center w-full mb-8 text-black dark:text-pink font-bold'> 
-            <small>Made with</small> <IoMdHeartEmpty/> <small>by <a > Sara </a> - {year} </small>
+            <small>Made with</small> <IoMdHeartEmpty className=" text-[#c3195d]"/> <small>by <a > Sara </a> - {year} </small>
         </div>
     );
     
