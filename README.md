@@ -34,6 +34,11 @@ TechBlio is a user-friendly and visually appealing e-library designed specifical
 
 <h2>Contact</h2>
 
-For inquiries or support, please contact us at saraa.ennaciri@gmail.com.
+For inquiries or support, please contact us at saraa.ennaciri@gmail.com
+
+<h2>Deployment</h2>
+
+TechBlio is deployed on Vercel. Check it out <a href="">here</a>.
+
 
 
