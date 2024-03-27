@@ -22,8 +22,9 @@ import python2 from "./roadmap/python-rm.pdf";
 import tailwind2 from "./roadmap/tailwind-rm.pdf";
 
 
-
+//website data: books, Roadmap, Cheatsheet
 export const data = [
+    /*BOOKS*/
     {
       id: 1,
       name: 'JS RoadMap',
@@ -161,6 +162,7 @@ export const data = [
       guide: 'CheatSheet',
       url: python1,
     },
+    
     /*Roadmap*/
     {
       id: 18,
@@ -227,12 +229,12 @@ export const data = [
       url: css2,
     },
   ];
-  
+
+/* Categories: website where user can practice */
   export const categories = [
     {
       id: 1,
       name: 'Free Code Camp',
-      
       url: 'https://www.freecodecamp.org/learn/2022/responsive-web-design/',
     },
     {
