@@ -1,5 +1,6 @@
 import React from 'react';
 
+//component for news letter
 const News = () => {
   return (
     <div className='w-full py-16 text-gray-200 px-4 '>
@@ -20,8 +21,7 @@ const News = () => {
             <button className='bg-[#c3195d] bg-opacity-70 text-[#121212] font-mono rounded-md font-medium w-[200px] ml-4 my-6 px-6 py-3'>
               Notify Me
             </button>
-          </div>
-          
+          </div>   
         </div>
       </div>
     </div>
