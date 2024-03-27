@@ -2,8 +2,8 @@ import React from 'react';
 import { categories } from '../data/data.js';
 
 const Category = () => {
-  //change it to websites for practicing 
-  console.log(categories);
+  
+  //Function for opening the link in new tab 
   const openLink = (url) => {
     window.open(url, '_blank');
   };
