@@ -40,7 +40,7 @@ For inquiries or support, please contact us at saraa.ennaciri@gmail.com 📧
 
 <h2>Deployment</h2>
 
-TechBlio is deployed on Vercel. Check it out <a href="">here</a>.🖥️
+TechBlio is deployed on Vercel. Check it out <a href="https://techblio-qy7j-blush.vercel.app/">here</a>.🖥️
 
 
 
