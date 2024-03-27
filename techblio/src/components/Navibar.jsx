@@ -33,14 +33,14 @@ const handleSubmit = (e) => {
 };
 
   return (
-    <div className='max-w-[1640px] mx-auto flex justify-between items-center p-4'>
+    <div className='max-w-[1640px] mx-auto flex justify-between items-center p-4 dark:bg-[#121212]'>
       {/* Left side */}
       <div className='flex items-center'>
         <div onClick={()=> setNav(!nav)} className='cursor-pointer'>
-          <AiOutlineMenu size={30} />
+          <AiOutlineMenu size={30} className='dark:text-gray-200'/>
         </div>
         <h1 className='text-2xl sm:text-3xl lg:text-4xl px-2'>
-          <span className='font-bold'><Link to="/">TECHBLIO.</Link></span>
+          <span className='font-bold dark:text-gray-200'><Link to="/">TECHBLIO.</Link></span>
         </h1>
         
       </div>

@@ -8,7 +8,7 @@ import { GrInstallOption } from "react-icons/gr";
 const Book = () => {
   const [books, setBooks] = useState(data);
 
-  // Filter Type html/css/react
+  //Filter by  html/css/react/tailwind ...
   const filterType = (category) => {
     setBooks(
       data.filter((item) => {
@@ -31,14 +31,15 @@ const Book = () => {
     window.open(url, '_blank');
   };*/
 
+  //Open book in new tab (for download)
   const startDownload = (url) => {
     //  download by opening the URL in a new tab
     window.open(url, '_blank');
   };
 
   return (
-    <div className='max-w-[1640px] m-auto px-4 py-12'>
-      <h1 className='text-black-900 font-bold text-4xl text-center font-mono'>
+    <div className='max-w-[1640px] m-auto px-4 py-12 dark:bg-[#121212]'>
+      <h1 className='text-black-900 font-bold text-4xl text-center font-mono dark:text-gray-200'>
          Resources
       </h1>
 
@@ -46,72 +47,72 @@ const Book = () => {
       <div className='flex flex-col lg:flex-row justify-between'>
         {/* Fliter Type */}
         <div>
-          <p className='font-bold text-gray-700 font-mono'>Languages</p>
+          <p className='font-bold text-gray-700 font-mono dark:text-gray-200'>Programming Languages - Framework</p>
           <div className='flex justfiy-between flex-wrap'>
             <button
               onClick={() => setBooks(data)}
-              className='m-1   text-oblack-600 font-mono hover:font-bold hover:text-[#f70776] hover:scale-105 duration-300 active:text-[#f70776]'
+              className='m-1 border border-black rounded-lg p-2  hover:border-pink  text-black-600 font-mono hover:font-bold hover:text-[#f70776] hover:scale-105 duration-300 active:text-[#f70776] dark:text-gray-200 dark:border-gray-200'
             >
               All
             </button>
             <button
               onClick={() => filterType('HTML/CSS')}
-              className='m-1   text-oblack-600 font-mono hover:font-bold hover:text-[#f70776] hover:scale-105 duration-300 active:text-[#f70776]'
+              className='m-1  border border-black rounded-lg p-2 hover:border hover:border-pink text-black-600 font-mono hover:font-bold hover:text-[#f70776] hover:scale-105 duration-300 active:text-[#f70776] dark:text-gray-200 dark:border-gray-200'
             >
               HTML/CSS
             </button>
             <button
               onClick={() => filterType('SQL')}
-              className='m-1   text-oblack-600 font-mono hover:font-bold hover:text-[#f70776] hover:scale-105 duration-300 active:text-[#f70776]'
+              className='m-1  border border-black rounded-lg p-2 hover:border hover:border-pink text-oblack-600 font-mono hover:font-bold hover:text-[#f70776] hover:scale-105 duration-300 active:text-[#f70776] dark:text-gray-200 dark:border-gray-200'
             >
              SQL
             </button>
             <button
               onClick={() => filterType('JAVASCRIPT')}
-              className='m-1   text-oblack-600 font-mono hover:font-bold hover:text-[#f70776] hover:scale-105 duration-300 active:text-[#f70776]'
+              className='m-1  border border-black rounded-lg p-2 hover:border hover:border-pink text-oblack-600 font-mono hover:font-bold hover:text-[#f70776] hover:scale-105 duration-300 active:text-[#f70776] dark:text-gray-200 dark:border-gray-200'
             >
               JAVASCRIPT
             </button>
             <button
               onClick={() => filterType('REACT')}
-              className='m-1   text-oblack-600 font-mono hover:font-bold hover:text-[#f70776] hover:scale-105 duration-300 active:text-[#f70776]'
+              className='m-1 border border-black rounded-lg p-2 hover:border hover:border-pink  text-oblack-600 font-mono hover:font-bold hover:text-[#f70776] hover:scale-105 duration-300 active:text-[#f70776] dark:text-gray-200 dark:border-gray-200'
             >
               REACT
             </button>
             <button
               onClick={() => filterType('TAILWIND')}
-              className='m-1   text-oblack-600 font-mono hover:font-bold hover:text-[#f70776] hover:scale-105 duration-300 active:text-[#f70776]'
+              className='m-1  border border-black rounded-lg p-2 hover:border hover:border-pink text-oblack-600 font-mono hover:font-bold hover:text-[#f70776] hover:scale-105 duration-300 active:text-[#f70776] dark:text-gray-200 dark:border-gray-200'
             >
               TAILWIND
             </button>
             <button
               onClick={() => filterType('PYTHON')}
-              className='m-1   text-oblack-600 font-mono hover:font-bold hover:text-[#f70776] hover:scale-105 duration-300 active:text-[#f70776]'
+              className='m-1  border border-black rounded-lg p-2 hover:border hover:border-pink text-oblack-600 font-mono hover:font-bold hover:text-[#f70776] hover:scale-105 duration-300 active:text-[#f70776] dark:text-gray-200 dark:border-gray-200'
             >
               PYTHON
             </button>
           </div>
         </div>
 
-        {/* Filter guide(ebook, roadmap or  cheatsheet) */}
+        {/* Filter Type of resources(ebook, roadmap or  cheatsheet) */}
         <div>
-          <p className='font-bold text-gray-700 font-mono'>Type</p>
+          <p className='font-bold text-gray-700 font-mono dark:text-gray-200'>Type of resources</p>
           <div className='flex justify-between max-w-[390px] w-full'>
             <button
               onClick={() => filterGuide('Book')}
-              className='m-1   text-oblack-600 font-mono hover:font-bold hover:text-[#f70776] hover:scale-105 duration-300 active:text-[#f70776]'
+              className='m-1  border border-black rounded-lg p-2 hover:border hover:border-pink text-oblack-600 font-mono hover:font-bold hover:text-[#f70776] hover:scale-105 duration-300 active:text-[#f70776] dark:text-gray-200 dark:border-gray-200'
             >
               Book
             </button>
             <button
               onClick={() => filterGuide('RoadMap')}
-              className='m-1   text-oblack-600 font-mono hover:font-bold hover:text-[#f70776] hover:scale-105 duration-300 active:text-[#f70776]'
+              className='m-1 border border-black rounded-lg p-2  hover:border-pink  text-oblack-600 font-mono hover:font-bold hover:text-[#f70776] hover:scale-105 duration-300 active:text-[#f70776] dark:text-gray-200 dark:border-gray-200'
             >
               RoadMap
             </button>
             <button
               onClick={() => filterGuide('CheatSheet')}
-              className='m-1   text-oblack-600 font-mono hover:font-bold hover:text-[#f70776] hover:scale-105 duration-300 active:text-[#f70776]'
+              className='m-1 border border-black rounded-lg p-2 hover:border hover:border-pink  text-oblack-600 font-mono hover:font-bold hover:text-[#f70776] hover:scale-105 duration-300 active:text-[#f70776] dark:text-gray-200 dark:border-gray-200 dark:hover:text-green'
             >
               CheatSheet
             </button>
@@ -133,12 +134,12 @@ const Book = () => {
               className='w-full h-[200px] object-cover rounded-t-lg'
             />
             <div className='flex justify-between px-2 py-4'>
-              <p className='font-bold'>{item.name}</p>
+              <p className='font-bold dark:text-gray-200'>{item.name}</p>
               <p>
                 {/*<span className='bg-gray-700 text-white p-1 rounded-full'>
                     {item.guide}
                   </span>*/}
-                <GrInstallOption  size={25} className='text-black hover:cursor-pointer hover:text-[#f70776]' onClick={() => startDownload(item.url)}/>
+                <GrInstallOption  size={25} className='text-black hover:cursor-pointer hover:text-[#f70776] dark:text-gray-200' onClick={() => startDownload(item.url)}/>
 
               </p>
                 
