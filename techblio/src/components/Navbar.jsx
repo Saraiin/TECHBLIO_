@@ -25,7 +25,7 @@ const Navbar = () => {
       <ul className='hidden md:flex'>
         <li className='p-4 font-bold font-mono text-[#121212]'><Link to="/">Home</Link></li>
         <li className='p-4 font-bold font-mono text-[#121212]'><Link to="/resources">Resources</Link></li>
-        <li className='p-4 font-bold font-mono text-[#121212]'>About</li>
+        <li className='p-4 font-bold font-mono text-[#121212]'><Link to="/about">About</Link></li>
         <li className='p-4 font-bold font-mono text-[#121212]'>Contact</li>
       </ul>
       {/* button to change mode (from light to dark) */}

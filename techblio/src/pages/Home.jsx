@@ -3,6 +3,8 @@ import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import Footer from '../components/Footer';
 import Sign from '../components/Sign';
+import News from '../components/News';
+import About from '../components/About';
 
 
 const Home = () => {
@@ -10,6 +12,8 @@ const Home = () => {
     <div>
       <Navbar />
       <Hero />
+      <About />
+      <News />
       <Footer />
       <Sign />
     </div>

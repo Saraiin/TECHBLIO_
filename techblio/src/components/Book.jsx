@@ -39,7 +39,7 @@ const Book = () => {
 
   return (
     <div className='max-w-[1640px] m-auto px-4 py-12 dark:bg-[#121212]'>
-      <h1 className='text-black-900 font-bold text-4xl text-center font-mono dark:text-gray-200'>
+      <h1 className='text-black-900 font-bold text-4xl text-center font-mono dark:text-gray-200 border rounded-md bg-[#c3195d] bg-opacity-70 mb-4'>
          Resources
       </h1>
 
@@ -51,43 +51,43 @@ const Book = () => {
           <div className='flex justfiy-between flex-wrap'>
             <button
               onClick={() => setBooks(data)}
-              className='m-1 border border-black rounded-lg p-2  hover:border-pink  text-black-600 font-mono hover:font-bold hover:text-[#f70776] hover:scale-105 duration-300 active:text-[#f70776] dark:text-gray-200 dark:border-gray-200'
+              className='m-1 border border-black rounded-md p-2  hover:border-pink  text-black-600 font-mono hover:font-bold hover:text-[#f70776] hover:scale-105 duration-300 active:text-[#f70776] dark:text-gray-200 dark:border-gray-200'
             >
               All
             </button>
             <button
               onClick={() => filterType('HTML/CSS')}
-              className='m-1  border border-black rounded-lg p-2 hover:border hover:border-pink text-black-600 font-mono hover:font-bold hover:text-[#f70776] hover:scale-105 duration-300 active:text-[#f70776] dark:text-gray-200 dark:border-gray-200'
+              className='m-1  border border-black rounded-md p-2 hover:border hover:border-pink text-black-600 font-mono hover:font-bold hover:text-[#f70776] hover:scale-105 duration-300 active:text-[#f70776] dark:text-gray-200 dark:border-gray-200'
             >
               HTML/CSS
             </button>
             <button
               onClick={() => filterType('SQL')}
-              className='m-1  border border-black rounded-lg p-2 hover:border hover:border-pink text-oblack-600 font-mono hover:font-bold hover:text-[#f70776] hover:scale-105 duration-300 active:text-[#f70776] dark:text-gray-200 dark:border-gray-200'
+              className='m-1  border border-black rounded-md p-2 hover:border hover:border-pink text-oblack-600 font-mono hover:font-bold hover:text-[#f70776] hover:scale-105 duration-300 active:text-[#f70776] dark:text-gray-200 dark:border-gray-200'
             >
              SQL
             </button>
             <button
               onClick={() => filterType('JAVASCRIPT')}
-              className='m-1  border border-black rounded-lg p-2 hover:border hover:border-pink text-oblack-600 font-mono hover:font-bold hover:text-[#f70776] hover:scale-105 duration-300 active:text-[#f70776] dark:text-gray-200 dark:border-gray-200'
+              className='m-1  border border-black rounded-md p-2 hover:border hover:border-pink text-oblack-600 font-mono hover:font-bold hover:text-[#f70776] hover:scale-105 duration-300 active:text-[#f70776] dark:text-gray-200 dark:border-gray-200'
             >
               JAVASCRIPT
             </button>
             <button
               onClick={() => filterType('REACT')}
-              className='m-1 border border-black rounded-lg p-2 hover:border hover:border-pink  text-oblack-600 font-mono hover:font-bold hover:text-[#f70776] hover:scale-105 duration-300 active:text-[#f70776] dark:text-gray-200 dark:border-gray-200'
+              className='m-1 border border-black rounded-md p-2 hover:border hover:border-pink  text-oblack-600 font-mono hover:font-bold hover:text-[#f70776] hover:scale-105 duration-300 active:text-[#f70776] dark:text-gray-200 dark:border-gray-200'
             >
               REACT
             </button>
             <button
               onClick={() => filterType('TAILWIND')}
-              className='m-1  border border-black rounded-lg p-2 hover:border hover:border-pink text-oblack-600 font-mono hover:font-bold hover:text-[#f70776] hover:scale-105 duration-300 active:text-[#f70776] dark:text-gray-200 dark:border-gray-200'
+              className='m-1  border border-black rounded-md p-2 hover:border hover:border-pink text-oblack-600 font-mono hover:font-bold hover:text-[#f70776] hover:scale-105 duration-300 active:text-[#f70776] dark:text-gray-200 dark:border-gray-200'
             >
               TAILWIND
             </button>
             <button
               onClick={() => filterType('PYTHON')}
-              className='m-1  border border-black rounded-lg p-2 hover:border hover:border-pink text-oblack-600 font-mono hover:font-bold hover:text-[#f70776] hover:scale-105 duration-300 active:text-[#f70776] dark:text-gray-200 dark:border-gray-200'
+              className='m-1  border border-black rounded-md p-2 hover:border hover:border-pink text-oblack-600 font-mono hover:font-bold hover:text-[#f70776] hover:scale-105 duration-300 active:text-[#f70776] dark:text-gray-200 dark:border-gray-200'
             >
               PYTHON
             </button>
@@ -100,19 +100,19 @@ const Book = () => {
           <div className='flex justify-between max-w-[390px] w-full'>
             <button
               onClick={() => filterGuide('Book')}
-              className='m-1  border border-black rounded-lg p-2 hover:border hover:border-pink text-oblack-600 font-mono hover:font-bold hover:text-[#f70776] hover:scale-105 duration-300 active:text-[#f70776] dark:text-gray-200 dark:border-gray-200'
+              className='m-1  border border-black rounded-md p-2 hover:border hover:border-pink text-oblack-600 font-mono hover:font-bold hover:text-[#f70776] hover:scale-105 duration-300 active:text-[#f70776] dark:text-gray-200 dark:border-gray-200'
             >
               Book
             </button>
             <button
               onClick={() => filterGuide('RoadMap')}
-              className='m-1 border border-black rounded-lg p-2  hover:border-pink  text-oblack-600 font-mono hover:font-bold hover:text-[#f70776] hover:scale-105 duration-300 active:text-[#f70776] dark:text-gray-200 dark:border-gray-200'
+              className='m-1 border border-black rounded-md p-2  hover:border-pink  text-oblack-600 font-mono hover:font-bold hover:text-[#f70776] hover:scale-105 duration-300 active:text-[#f70776] dark:text-gray-200 dark:border-gray-200'
             >
               RoadMap
             </button>
             <button
               onClick={() => filterGuide('CheatSheet')}
-              className='m-1 border border-black rounded-lg p-2 hover:border hover:border-pink  text-oblack-600 font-mono hover:font-bold hover:text-[#f70776] hover:scale-105 duration-300 active:text-[#f70776] dark:text-gray-200 dark:border-gray-200 dark:hover:text-green'
+              className='m-1 border border-black rounded-md p-2 hover:border hover:border-pink  text-oblack-600 font-mono hover:font-bold hover:text-[#f70776] hover:scale-105 duration-300 active:text-[#f70776] dark:text-gray-200 dark:border-gray-200 dark:hover:text-green'
             >
               CheatSheet
             </button>
@@ -126,7 +126,7 @@ const Book = () => {
         {books.map((item, index) => (
           <div
             key={index}
-            className='border shadow-lg rounded-lg hover:scale-105 duration-300'
+            className='border shadow-lg rounded-md hover:scale-105 duration-300'
           >
             <img
               src={item.image}

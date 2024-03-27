@@ -4,6 +4,7 @@ import Home from './pages/Home.jsx';
 import Resources from './pages/Resources.jsx';
 import Results from './pages/Results.jsx';
 import './fonts.css';
+import About from './components/About.jsx'
 
 
 function App() {
@@ -12,7 +13,9 @@ function App() {
        <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/resources" element={<Resources />}></Route>
-        <Route path="/results" element={<Results />}></Route>
+        <Route path="/search" element={<Results />}></Route>
+        <Route path="/about" element={<About />}></Route>
+
         
         </Routes>
     </Router>

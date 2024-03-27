@@ -9,7 +9,7 @@ const Category = () => {
   };
   return (
     <div className='max-w-[1640px] m-auto px-4 py-12 dark:bg-[#121212] '>
-      <h1 className='text-black-600 font-bold text-4xl text-center font-mono dark:text-gray-200'>
+      <h1 className='text-black-600 font-bold text-4xl text-center font-mono dark:text-gray-200 border rounded-md bg-[#c3195d] bg-opacity-70'>
         Practice
       </h1>
       {/* Categories */}

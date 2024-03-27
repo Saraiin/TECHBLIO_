@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom';
 const Navibar = () => {
 const [nav, setNav] = useState(false)
 const [dark, setDark] = React.useState(false);
-const [query, setQuery] = useState('');
+const [searchQuery, setSearchQuery] = useState('');
 const navigate = useNavigate();
 
 //change mode to dark
@@ -23,13 +23,9 @@ const darkModeHandler = () => {
 };
 
 //search bar 
-const handleChange = (e) => {
-  setQuery(e.target.value);
-};
-
-const handleSubmit = (e) => {
+const handleSearch = (e) => {
   e.preventDefault();
-  navigate(`/search?query=${encodeURIComponent(query)}`);
+  navigate(`/search?query=${searchQuery}`);
 };
 
   return (
@@ -46,15 +42,15 @@ const handleSubmit = (e) => {
       </div>
 
       {/* Search Input */}
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSearch}>
         <div className='bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]'>
           <AiOutlineSearch size={25} />
           <input
             className='bg-transparent p-2 w-full focus:outline-none'
             type='text'
             placeholder='Search books'
-            value={query}
-            onChange={handleChange}
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
           />
         </div>
       </form>

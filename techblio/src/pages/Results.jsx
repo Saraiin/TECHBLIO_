@@ -1,46 +1,58 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import axios from 'axios';
-import Navibar from '../components/Navibar';
-
+import Navibar from '../components/Navibar'
 const Results = () => {
-  const location = useLocation();
-  const query = new URLSearchParams(location.search).get('query');
   const [searchResults, setSearchResults] = useState([]);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchSearchResults = async () => {
+    const fetchData = async () => {
       try {
-        const response = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=${query}`);
-        setSearchResults(response.data.items);
-        setLoading(false);
+        const response = await fetch('https://www.googleapis.com/books/v1/volumes?q=html');
+        if (!response.ok) {
+          throw new Error('Failed to fetch data');
+        }
+        const data = await response.json();
+        setSearchResults(data.items || []); 
       } catch (error) {
-        console.error('Error fetching search results:', error);
-        setLoading(false);
+        console.error('Error fetching data:', error);
       }
     };
 
-    fetchSearchResults();
-  }, [query]);
+    fetchData();
+  }, []);
 
   return (
-    
     <div>
       <Navibar />
-      <h1>Search Results for: {query}</h1>
-      {loading ? (
-        <p>Loading...</p>
-      ) : (
-        <div>
-          {searchResults.map((book) => (
-            <div key={book.id}>
-              <h2>{book.volumeInfo.title}</h2>
-              {/* Render other book details here */}
+      <h1 className='text-black-900 font-bold text-4xl text-center font-mono dark:text-gray-200 border rounded-md bg-[#c3195d] bg-opacity-70 mb-4 dark:bg-[#121212]'>
+        Search Results
+      </h1>
+      {/* display books */}
+      <div className='grid grid-cols-2 lg:grid-cols-4 gap-6 pt-4'>
+        {searchResults.map(book => (
+          <div
+            key={book.id}
+            className='border shadow-lg rounded-md hover:scale-105 duration-300'
+          >
+            
+            {book.volumeInfo.imageLinks && (
+              <img
+                src={book.volumeInfo.imageLinks.thumbnail}
+                alt={book.volumeInfo.title} 
+                className='w-full h-[200px] object-cover rounded-t-lg'
+              />
+            )}
+
+            <div className='flex justify-between px-2 py-4'>
+              <p className='font-bold dark:text-gray-200'>{book.volumeInfo.title}</p>
+              <p>
+                <a href={book.volumeInfo.infoLink} target="_blank" rel="noopener noreferrer"> 
+                  <GrInstallOption  size={25} className='text-black hover:cursor-pointer hover:text-[#f70776] dark:text-gray-200' />
+                  </a>
+              </p>
             </div>
-          ))}
-        </div>
-      )}
+        ))}
+      </div>
     </div>
   );
 };
