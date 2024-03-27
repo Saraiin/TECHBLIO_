@@ -1,6 +1,8 @@
 <h1>TechBlio E-Library</h1>
 
 Welcome to TechBlio, your go-to e-library for all things tech! 📚🖥️
+![image](https://github.com/Saraiin/TECHBLIO_/assets/125512367/90ff1772-2f16-4e74-af24-73aabff757b2)
+
 
 <h2>Overview</h2>
 
