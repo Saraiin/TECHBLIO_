@@ -14,10 +14,11 @@ const Navbar = () => {
     setNav(!nav);
   };
 
-  const darkModeHandler = () => {
+  //function to handle dark mode
+/*  const darkModeHandler = () => {
         setDark(!dark);
         document.body.classList.toggle("dark");
-    };
+    }; */
 
   return (
     <div className='flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4  '>
@@ -44,7 +45,7 @@ const Navbar = () => {
           <h1 className='w-full text-3xl font-bold text-[#c3195d] m-4  font-mono '>TECHBLIO.</h1>
           <li className='p-4 border-b border-[#c3195d] font-bold font-mono text-gray-200'><Link to="/Home">Home</Link></li>
           <li className='p-4 border-b border-[#c3195d] font-bold font-mono text-gray-200'><Link to="/Resources">Resources</Link></li>
-          <li className='p-4 border-b border-[#c3195d] font-bold font-mono text-gray-200'>About</li>
+          <li className='p-4 border-b border-[#c3195d] font-bold font-mono text-gray-200'><Link to="/about">About</Link></li>
           <li className='p-4 font-bold font-mono text-gray-200'>Contact</li>
         </ul>
     </div>
