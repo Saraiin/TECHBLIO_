@@ -18,7 +18,7 @@ const Hero = () => {
           </p>
           <ReactTyped
           className='md:text-3xl sm:text-2xl text-xl font-bold font-mono md:pl-4 pl-2 text-[#c3195d]'
-            strings={['React', 'Javascript', 'Python', 'HTML', 'REACT']}
+            strings={['React', 'CSS', 'Python', 'HTML', 'REACT']}
             typeSpeed={120}
             backSpeed={140}
             loop
