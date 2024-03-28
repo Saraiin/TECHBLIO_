@@ -31,6 +31,9 @@ TechBlio is a user-friendly and visually appealing e-library designed specifical
 	•	Enhance user experience with additional features like user authentication and bookmarking.
 	•	Incorporate user feedback to continuously improve and refine the platform.
 
+<h2>Google Cloud APIs</h2>
+	You can check the documentation <a href="https://cloud.google.com/apis/docs/overview" >Here</a>
+
 <h2>Authors</h2>
     SARA ENNACIRI👩🏻‍💻
 
